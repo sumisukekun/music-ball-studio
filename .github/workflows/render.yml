@@ -33,12 +33,12 @@ jobs:
       - name: check frames
         if: always()
         run: |
+          shopt -s nullglob
           for f in build/*/preview/*.png; do
-            [ -f "$f" ] || continue
-            m=$(ffmpeg -loglevel error -i "$f" -vf "format=gray,signalstats,metadata=print:key=lavfi.signalstats.YAVG" -f null - 2>&1 | grep -o 'YAVG=[0-9.]*' | head -1)
-            echo "::notice title=frame::$f $m"
+            m=$(ffprobe -v error -f lavfi -i "movie=$f,format=gray,signalstats" -show_entries frame_tags=lavfi.signalstats.YAVG,lavfi.signalstats.YMAX -of csv=p=0)
+            echo "::notice title=frame::$f avg,max=$m"
           done
-          for f in out/*.mp4; do [ -f "$f" ] && echo "::notice title=video::$f $(ffprobe -v error -show_entries format=duration -of csv=p=0 "$f")s"; done
+          for f in out/*.mp4; do echo "::notice title=video::$f $(ffprobe -v error -show_entries format=duration -of csv=p=0 "$f")s"; done
       - uses: actions/upload-artifact@v4
         with:
           name: video
