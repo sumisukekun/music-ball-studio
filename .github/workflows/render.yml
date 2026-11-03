@@ -30,6 +30,15 @@ jobs:
       - name: make
         env: { MBS_PARTS: "4" }
         run: python studio/make.py "${{ inputs.config }}" --steps "${{ inputs.steps }}"
+      - name: check frames
+        if: always()
+        run: |
+          for f in build/*/preview/*.png; do
+            [ -f "$f" ] || continue
+            m=$(ffmpeg -loglevel error -i "$f" -vf "format=gray,signalstats,metadata=print:key=lavfi.signalstats.YAVG" -f null - 2>&1 | grep -o 'YAVG=[0-9.]*' | head -1)
+            echo "::notice title=frame::$f $m"
+          done
+          for f in out/*.mp4; do [ -f "$f" ] && echo "::notice title=video::$f $(ffprobe -v error -show_entries format=duration -of csv=p=0 "$f")s"; done
       - uses: actions/upload-artifact@v4
         with:
           name: video
