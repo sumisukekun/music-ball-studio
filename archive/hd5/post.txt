@@ -1,0 +1,7 @@
+format=gbrp,split[a][b];[b]colorlevels=rimin=0.35:gimin=0.35:bimin=0.35,gblur=sigma=10[g];[a][g]blend=all_mode=screen:all_opacity=0.9,
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='EVERY BOUNCE = ONE NOTE':fontsize=64:fontcolor=0xFFCF4A:borderw=6:bordercolor=0x0B0614:x=(w-text_w)/2:y=300:enable='lt(t,5.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='Higher note = higher bounce':fontsize=50:fontcolor=white:borderw=5:bordercolor=0x0B0614:x=(w-text_w)/2:y=385:enable='lt(t,5.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='Brahms - Hungarian Dance No.5':fontsize=46:fontcolor=white:borderw=5:bordercolor=0x0B0614:x=(w-text_w)/2:y=280:enable='between(t,5.5,68.57)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='THE WHOLE SONG':fontsize=80:fontcolor=0xFFCF4A:borderw=7:bordercolor=0x0B0614:x=(w-text_w)/2:y=280:enable='gte(t,68.57+1.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='IN ONE SPIRAL':fontsize=80:fontcolor=0xFF7A93:borderw=7:bordercolor=0x0B0614:x=(w-text_w)/2:y=375:enable='gte(t,68.57+1.5)',
+format=yuv420p

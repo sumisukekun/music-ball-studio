@@ -1,0 +1,37 @@
+{
+  "name": "hungarian_dance_5",
+  "song": "songs/hungarian_dance_5.py",
+  "engine": "spiral_scene.py",
+  "scene": {
+    "seed": 5, "gravity": 40.0, "ball_radius": 0.28, "beat_voice": "bass",
+    "lanes": [
+      {"voices": ["mel", "mel2", "coda"], "merge": 0.07,
+       "z": {"mel": {"base": 4.2, "ref": 69, "scale": 0.27, "use": "max"}, "mel2": {"base": 4.2, "ref": 69, "scale": 0.27, "use": "max"}, "coda": {"fixed": 7.5}},
+       "color": "#ffcf4a", "light": "#fff1b8", "inlay": "#fff1b8", "sparks": 5},
+      {"voices": ["bass", "chord"], "merge": 0.07,
+       "z": {"bass": {"base": -3.6, "ref": 38, "scale": 0.08, "use": "min"}, "chord": {"base": -1.2, "ref": 57, "scale": 0.06, "use": "min"}},
+       "radius_offset": -1.9, "color": "#ff4d6d", "light": "#ffc2cf", "inlay": "#ffc2cf", "sparks": 3}
+    ],
+    "world": "#0b0614", "dust": "#7a3a4a", "bokeh": "#3a1a24",
+    "sparkle_colors": ["#fff1b8", "#ffc2cf"]
+  },
+  "audio": {
+    "voices": {
+      "mel":   {"inst": "piano", "vel": 0.68, "gain": 0.6, "tick": [0.05, 2400]},
+      "mel2":  {"inst": "piano", "vel": 0.5, "gain": 0.4},
+      "bass":  {"inst": "piano", "vel": 0.55, "gain": 0.5, "pan": -0.15, "tick": [0.04, 1500]},
+      "chord": {"inst": "piano", "vel": 0.36, "gain": 0.33, "pan": 0.1},
+      "coda":  {"inst": "piano", "vel": 0.92, "gain": 0.6}
+    },
+    "reverb": {"length": 2.2, "decay": 3.0, "wet": 0.3}
+  },
+  "post": {
+    "captions": [
+      {"text": "EVERY BOUNCE = ONE NOTE", "size": 64, "color": "0xFFCF4A", "y": 300, "from": 0, "to": 5.5, "border_color": "0x0B0614"},
+      {"text": "Higher note = higher bounce", "size": 50, "y": 385, "from": 0, "to": 5.5, "border_color": "0x0B0614"},
+      {"text": "Brahms - Hungarian Dance No.5", "size": 46, "y": 280, "from": 5.5, "to": "end_music", "border_color": "0x0B0614"},
+      {"text": "THE WHOLE SONG", "size": 80, "color": "0xFFCF4A", "y": 280, "from": "end_music+1.5", "border_color": "0x0B0614"},
+      {"text": "IN ONE SPIRAL", "size": 80, "color": "0xFF7A93", "y": 375, "from": "end_music+1.5", "border_color": "0x0B0614"}
+    ]
+  }
+}

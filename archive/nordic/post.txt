@@ -1,0 +1,6 @@
+format=gbrp,split[a][b];[b]colorlevels=rimin=0.5:gimin=0.5:bimin=0.5,gblur=sigma=10[g];[a][g]blend=all_mode=screen:all_opacity=0.8,
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='EVERY BOUNCE = ONE NOTE':fontsize=66:fontcolor=white:borderw=6:bordercolor=0x050A1D:x=(w-text_w)/2:y=270:enable='lt(t,5.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='WAIT FOR THE END...':fontsize=60:fontcolor=0x7FE3FF:borderw=6:bordercolor=0x050A1D:x=(w-text_w)/2:y=360:enable='lt(t,5.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='In the Hall of the Mountain King':fontsize=46:fontcolor=white:borderw=5:bordercolor=0x050A1D:x=(w-text_w)/2:y=270:enable='between(t,5.5,78.24)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='Edvard Grieg (Norway)':fontsize=38:fontcolor=0x9FE8D0:borderw=4:bordercolor=0x050A1D:x=(w-text_w)/2:y=330:enable='between(t,5.5,78.24)',
+format=yuv420p

@@ -1,0 +1,39 @@
+name: render
+on:
+  workflow_dispatch:
+    inputs:
+      config:
+        description: "config file (e.g. configs/midnight_spiral.json)"
+        required: true
+        default: configs/midnight_spiral.json
+      steps:
+        description: "steps (song,audio,scene,render,post or song,audio,scene,preview)"
+        required: false
+        default: song,audio,scene,render,post
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - name: cache samples
+        uses: actions/cache@v4
+        with: { path: samples, key: salamander-v1 }
+      - name: setup
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg lilypond fonts-dejavu-core libxi6 libxkbcommon0 libsm6 libgl1 libegl1 libgl1-mesa-dri
+          pip install -q bpy numpy scipy mido
+          bash scripts/fetch_samples.sh
+      - name: make
+        env: { MBS_PARTS: "4" }
+        run: python studio/make.py "${{ inputs.config }}" --steps "${{ inputs.steps }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: video
+          path: |
+            out/*.mp4
+            build/*/preview/*.png
+          if-no-files-found: warn

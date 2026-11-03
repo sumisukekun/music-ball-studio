@@ -1,0 +1,4 @@
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='EVERY HIT = ONE NOTE':fontsize=70:fontcolor=0xC8102E:borderw=6:bordercolor=white:x=(w-text_w)/2:y=300:enable='lt(t,5.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='WAIT FOR THE END...':fontsize=58:fontcolor=0x00205B:borderw=6:bordercolor=white:x=(w-text_w)/2:y=395:enable='lt(t,5.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='In the Hall of the Mountain King':fontsize=46:fontcolor=0x00205B:borderw=5:bordercolor=white:x=(w-text_w)/2:y=270:enable='between(t,5.5,78.24)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='Edvard Grieg (Norway)':fontsize=38:fontcolor=0xC8102E:borderw=4:bordercolor=white:x=(w-text_w)/2:y=330:enable='between(t,5.5,78.24)'

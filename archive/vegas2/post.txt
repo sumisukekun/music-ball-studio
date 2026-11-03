@@ -1,0 +1,6 @@
+format=gbrp,split[a][b];[b]colorlevels=rimin=0.45:gimin=0.45:bimin=0.45,gblur=sigma=12[g];[a][g]blend=all_mode=screen:all_opacity=0.85,
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='EVERY BOUNCE':fontsize=86:fontcolor=white:borderw=7:bordercolor=black:x=(w-text_w)/2:y=300:enable='lt(t,5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='PLAYS A NOTE':fontsize=86:fontcolor=0xFFE600:borderw=7:bordercolor=black:x=(w-text_w)/2:y=400:enable='lt(t,5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='NAME THIS SONG?':fontsize=60:fontcolor=white:borderw=6:bordercolor=black:x=(w-text_w)/2:y=260:enable='between(t,5,55.8)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='JACKPOT!':fontsize=150:fontcolor=0xFFE600:borderw=10:bordercolor=0xFF2BD6:x=(w-text_w)/2:y=330:enable='gte(t,55.8)',
+format=yuv420p

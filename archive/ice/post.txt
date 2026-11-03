@@ -1,0 +1,6 @@
+format=gbrp,split[a][b];[b]colorlevels=rimin=0.42:gimin=0.42:bimin=0.42,gblur=sigma=14[g];[a][g]blend=all_mode=screen:all_opacity=0.8,
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='EVERY NOTE BUILDS':fontsize=68:fontcolor=white:borderw=6:bordercolor=0x0A1840:x=(w-text_w)/2:y=300:enable='lt(t,5.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='AN ICE PALACE':fontsize=84:fontcolor=0xA9E0FF:borderw=7:bordercolor=0x0A1840:x=(w-text_w)/2:y=390:enable='lt(t,5.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='Debussy - Arabesque No.1':fontsize=44:fontcolor=white:borderw=5:bordercolor=0x0A1840:x=(w-text_w)/2:y=280:enable='between(t,5.5,83.4)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='THE ICE PALACE':fontsize=96:fontcolor=white:borderw=8:bordercolor=0x2A5FD0:x=(w-text_w)/2:y=330:enable='gte(t,83.4)',
+format=yuv420p

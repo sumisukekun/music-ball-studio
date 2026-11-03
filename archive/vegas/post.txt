@@ -1,0 +1,6 @@
+split[a][b];[b]colorlevels=rimin=0.6:gimin=0.6:bimin=0.6,gblur=sigma=14[g];[a][g]blend=all_mode=screen:all_opacity=0.7,
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='WHICH CHIP HITS THE':fontsize=64:fontcolor=white:borderw=6:bordercolor=black:x=(w-text_w)/2:y=1150:enable='lt(t,5.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='$1,000,000 JACKPOT?':fontsize=78:fontcolor=0xFFE600:borderw=7:bordercolor=black:x=(w-text_w)/2:y=1230:enable='lt(t,5.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='COMMENT YOUR COLOR!':fontsize=54:fontcolor=white:borderw=5:bordercolor=black:x=(w-text_w)/2:y=250:enable='between(t,5.5,54.9)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='BLUE CHIP WINS':fontsize=84:fontcolor=0x3D8BFF:borderw=8:bordercolor=white:x=(w-text_w)/2:y=420:enable='gte(t,55.2)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='$1,000,000!':fontsize=120:fontcolor=0xFFE600:borderw=9:bordercolor=black:x=(w-text_w)/2:y=530:enable='gte(t,55.2)'

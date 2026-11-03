@@ -1,0 +1,7 @@
+format=gbrp,split[a][b];[b]colorlevels=rimin=0.35:gimin=0.35:bimin=0.35,gblur=sigma=9[g];[a][g]blend=all_mode=screen:all_opacity=0.85,
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='EVERY BOUNCE = ONE NOTE':fontsize=60:fontcolor=0xFFB454:borderw=5:bordercolor=0x05080F:x=(w-text_w)/2:y=300:enable='lt(t,5.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='a late-night jazz trio':fontsize=48:fontcolor=0xBFEEFF:borderw=5:bordercolor=0x05080F:x=(w-text_w)/2:y=380:enable='lt(t,5.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='Midnight Spiral (original)':fontsize=44:fontcolor=white:borderw=5:bordercolor=0x05080F:x=(w-text_w)/2:y=280:enable='between(t,5.5,59.38)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='THE WHOLE SONG':fontsize=76:fontcolor=0xFFB454:borderw=6:bordercolor=0x05080F:x=(w-text_w)/2:y=280:enable='gte(t,59.38+1.5)',
+drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='IN ONE SPIRAL':fontsize=76:fontcolor=0x7FD6F2:borderw=6:bordercolor=0x05080F:x=(w-text_w)/2:y=370:enable='gte(t,59.38+1.5)',
+format=yuv420p

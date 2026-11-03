@@ -1,0 +1,41 @@
+{
+  "name": "midnight_spiral",
+  "song": "songs/midnight_spiral.py",
+  "engine": "spiral_scene.py",
+  "scene": {
+    "seed": 8, "gravity": 34.0, "ball_radius": 0.24, "beat_voice": "bass",
+    "units_per_beat": 4.0, "spiral_r0": 7.0, "spiral_turn_gap": 4.6,
+    "lanes": [
+      {"voices": ["mel", "coda"], "merge": 0.07,
+       "z": {"mel": {"base": 4.0, "ref": 69, "scale": 0.3, "use": "max"}, "coda": {"fixed": 6.5}},
+       "radius_offset": 0.0, "color": "#ffb454", "light": "#ffe1b0", "inlay": "#ffe1b0", "sparks": 3},
+      {"voices": ["bass"], "merge": 0.07,
+       "z": {"bass": {"base": -2.6, "ref": 41, "scale": 0.16, "use": "min"}},
+       "radius_offset": -1.9, "color": "#4fc3e8", "light": "#bfeeff", "inlay": "#bfeeff", "sparks": 3, "spark_every": 2}
+    ],
+    "detail": {"inlay": true, "ripples": true, "helix": true},
+    "world": "#05080f", "dust": "#8a6a3a", "bokeh": "#3a2a1c",
+    "sparkle_voice": "comp", "sparkle_colors": ["#ffe1b0", "#bfeeff", "#ffffff"],
+    "lens": 30, "cam_out": 12.5, "render_resolution": [1440, 2560], "exposure": 0.3
+  },
+  "audio": {
+    "voices": {
+      "mel":  {"inst": "piano", "vel": 0.55, "gain": 0.62, "pan": 0.1},
+      "comp": {"inst": "piano", "vel": 0.3, "gain": 0.28, "pan": -0.1},
+      "bass": {"inst": "upright", "gain": 0.42, "pan": -0.15},
+      "coda": {"inst": "piano", "vel": 0.6, "gain": 0.6}
+    },
+    "drums": {"gain": 1.0},
+    "reverb": {"length": 2.0, "decay": 3.0, "wet": 0.28}
+  },
+  "post": {
+    "glow": {"threshold": 0.35, "sigma": 9, "opacity": 0.85},
+    "captions": [
+      {"text": "EVERY BOUNCE = ONE NOTE", "size": 60, "color": "0xFFB454", "y": 300, "from": 0, "to": 5.5},
+      {"text": "a late-night jazz trio", "size": 48, "color": "0xBFEEFF", "y": 380, "from": 0, "to": 5.5},
+      {"text": "Midnight Spiral (original)", "size": 44, "y": 280, "from": 5.5, "to": "end_music"},
+      {"text": "THE WHOLE SONG", "size": 76, "color": "0xFFB454", "y": 280, "from": "end_music+1.5"},
+      {"text": "IN ONE SPIRAL", "size": 76, "color": "0x7FD6F2", "y": 370, "from": "end_music+1.5"}
+    ]
+  }
+}
